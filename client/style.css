@@ -88,7 +88,7 @@ nav {
 /* image de l'article */
 
 article {
-    height: 250px;
+    height: 300px;
     display: flex;
     flex: auto;
 }
@@ -96,6 +96,7 @@ article {
 article img {
     height: 100%;
     flex: 1;
+    border: none;
 }
 
 .article-img div {
@@ -314,29 +315,20 @@ overflow: hidden;
 
 /* Style the buttons */
 .btn {
+padding: 12px 16px;
 border: none;
 outline: none;
-padding: 12px 16px;
-background-color: #f1f1f1;
+background-color: #fff4f3;
 cursor: pointer;
+border-color: #990000;
 }
 
 .btn:hover {
-background-color: #ddd;
+    background-color: #990000;
+    color: #fff;
 }
 
 .btn.active {
-background-color: #666;
+background-color: #990000;
 color: white;
 }
-
-/* hidden div for filter options 
-
-.hiddendiv{
-    display:none;
-    height:200px;
-}
-
-.clicker:focus + .hiddendiv{
-    display:block;
-}*/

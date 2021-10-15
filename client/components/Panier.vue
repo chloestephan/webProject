@@ -21,9 +21,7 @@
       </div>
     </article>
 
-    <!--<button  class="btn-top" @click="buyBasket()">Buy</button>-->
-    
-    <button class="hidden"><router-link to='/buyPanier'>Buy</router-link></button>
+    <button class="hidden buy"><router-link to='/buyPanier'>Buy</router-link></button>
   </div>
 </template>
 
@@ -99,7 +97,11 @@ textarea {
 select {
   border-radius: 0;
   border: solid #990000 2px;
-  color: #FF9200;
+  color: #990000;
+}
+
+.buy {
+  margin-top: 50px;
 }
 
 h2 {

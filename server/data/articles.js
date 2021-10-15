@@ -9,7 +9,7 @@ const articles = [
     stack: [ 'Trousers' ]
   },
   {
-    id: 2,
+    id: 1,
     class:'filterDiv trousers',
     name: 'Shorts',
     description: 'Ajouter description',
@@ -18,7 +18,7 @@ const articles = [
     stack: [ 'Trousers' ]
   },
   {
-    id: 3,
+    id: 1,
     class:'filterDiv trousers',
     name: 'Pants',
     description: 'Ajouter description',
@@ -27,7 +27,7 @@ const articles = [
     stack: [ 'Trousers' ]
   },
   {
-    id: 4,
+    id: 2,
     class:'filterDiv filterDiv tops',
     name: 'T-Shirt',
     description: 'Ajouter description',
@@ -36,7 +36,7 @@ const articles = [
     stack: [ 'Tops' ]
   },
   {
-    id: 5,
+    id: 2,
     class:'filterDiv tops',
     name: 'Dress shirt',
     description: 'Ajouter description',
@@ -45,7 +45,7 @@ const articles = [
     stack: [ 'Tops' ]
   },
   {
-    id: 6,
+    id: 3,
     class:'filterDiv shoes',
     name: 'Baskets',
     description: 'Ajouter description',
@@ -54,7 +54,7 @@ const articles = [
     stack: [ 'Shoes' ]
   },
   {
-    id: 7,
+    id: 3,
     class:'filterDiv shoes',
     name: 'Boots',
     description: 'Ajouter description',
@@ -63,7 +63,7 @@ const articles = [
     stack: [ 'Shoes' ]
   },
   {
-    id: 8,
+    id: 4,
     class:'filterDiv accessories',
     name: 'Necklace',
     description: 'Ajouter description',
@@ -72,7 +72,7 @@ const articles = [
     stack: [ 'Accessories' ]
   },
   {
-    id: 9,
+    id: 4,
     class:'filterDiv accessories',
     name: 'Bracelet',
     description: 'Ajouter description',
@@ -81,7 +81,7 @@ const articles = [
     stack: [ 'Accessories' ]
   },
   {
-    id: 10,
+    id: 4,
     class:'filterDiv accessories',
     name: 'Sweater',
     description: "Ajouter description",

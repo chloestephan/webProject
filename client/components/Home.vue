@@ -31,6 +31,7 @@
         <div class="article-title">
           <h2>{{ article.name }} - {{ article.price }}€</h2>
           <div>
+            <!-- allow someone to delete an article or edit the description of an article -->
           <!--<button @click="deleteArticle(article.id)">Supprimer</button>
           <button @click="editArticle(article)">Modifier</button>-->
           <button class="btnArticles" @click="addToPanier(article.id)" v-if="!isInPanier(article.id)">Add to basket</button>
@@ -68,6 +69,7 @@
 </template>
 
 <script>
+
 module.exports = {
   props: {
     articles: { type: Array, default: [] },
