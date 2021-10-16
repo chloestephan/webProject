@@ -11,6 +11,10 @@ Then, in the powershell window :
 
 `npm start`
 
+# See the project
+
+Once all theses steps are done, the project is on the following link : http://localhost:3000/#/
+
 # Properties
 
 You have a header that links to the main page and to the basket.
