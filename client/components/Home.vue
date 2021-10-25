@@ -1,27 +1,14 @@
 <template>
   <div>
     <div id="myBtnContainer">
-      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-      <button class="btn" onclick="filterSelection('trousers')"> Trousers</button>
-      <button class="btn" onclick="filterSelection('tops')"> Tops</button>
-      <button class="btn" onclick="filterSelection('shoes')"> Shoes</button>
-      <button class="btn" onclick="filterSelection('accessories')"> Accessories</button>
+      <button class="btn active" v-on:click="filterSelection('all')"> Show all</button>
+      <button class="btn" v-on:click="filterSelection('trousers')"> Trousers</button>
+      <button class="btn" v-on:click="filterSelection('tops')"> Tops</button>
+      <button class="btn" v-on:click="filterSelection('shoes')"> Shoes</button>
+      <button class="btn" v-on:click="filterSelection('accessories')"> Accessories</button>
     </div>
 
-    <div class="container">
-      <div class="filterDiv trousers">Trackpants</div>
-      <div class="filterDiv trousers">Short</div>
-      <div class="filterDiv trousers">Pants</div>
-      <div class="filterDiv tops">T-shirt</div>
-      <div class="filterDiv tops">Dress shirt</div>
-      <div class="filterDiv shoes">Baskets</div>
-      <div class="filterDiv shoes">Boots</div>
-      <div class="filterDiv accessories">Necklace</div>
-      <div class="filterDiv accessories">Bracelet</div>
-      <div class="filterDiv tops">Sweater</div>
-    </div>
-
-    <article v-for="article in articles" :key="article.id">
+    <article v-for="article in getArticles()" :key="article.id">
 
       <div class="article-img">
         <div :style="{ backgroundImage: 'url(' + article.image + ')' }">
@@ -32,8 +19,8 @@
           <h2>{{ article.name }} - {{ article.price }}€</h2>
           <div>
             <!-- allow someone to delete an article or edit the description of an article -->
-          <!--<button @click="deleteArticle(article.id)">Supprimer</button>
-          <button @click="editArticle(article)">Modifier</button>-->
+          <button class="btnArticles" @click="deleteArticle(article.id)">Supprimer</button>
+          <button class="btnArticles" @click="editArticle(article)">Modifier</button>
           <button class="btnArticles" @click="addToPanier(article.id)" v-if="!isInPanier(article.id)">Add to basket</button>
           <button class="btnArticles" @click="removeFromPanier(article.id)" v-else>Remove from basket</button>
           </div>
@@ -51,20 +38,17 @@
         <p><textarea v-model="editingArticle.description"></textarea></p>
         <input type="text" v-model="editingArticle.image" placeholder="Lien vers l'image">
       </div>
-
     </article>
 
     <!-- allows someone to add an article to the list of clothing to buy -->
-    <!--
     <form class="form-add" @submit.prevent="addArticle">
-      <h2>Nouveau produit à ajouter</h2>
-      <input type="text" v-model="newArticle.name" placeholder="Nom du produit" required class="nom-du-produit">
-      <input type="number" v-model="newArticle.price" placeholder="Prix" required class="prix">
-      <textarea type="text" v-model="newArticle.description" placeholder="Description de l'article" required class="new-description"></textarea>
-      <input type="text" v-model="newArticle.image" placeholder="Lien vers l'image" class="link-img">
-      <button type="submit" class="add-article">Ajouter</button>
+      <h2>Add a new product</h2>
+      <input type="text" v-model="newArticle.name" placeholder="Product's name" required class="nom-du-produit">
+      <input type="number" v-model="newArticle.price" placeholder="Price" required class="prix">
+      <textarea type="text" v-model="newArticle.description" placeholder="Article's description" required class="new-description"></textarea>
+      <input type="text" v-model="newArticle.image" placeholder="Link to the image" class="link-img">
+      <button class="btnArticles add-article" type="submit">Add</button>
     </form>
-    -->
   </div>
 </template>
 
@@ -89,10 +73,30 @@ module.exports = {
         description: '',
         image: '',
         price: 0
-      }
+      },
+      select : "all"
     }
   },
   methods: {
+    
+    getArticles(){
+      let listArticles = [];
+      if(this.select != "all"){
+        for(i in this.articles){
+          console.log(this.articles[i]);
+          if( this.articles[i].category == this.select){
+            listArticles.push(this.articles[i]);
+          }
+        }
+      }
+      else{
+        listArticles = this.articles;
+      }
+      return listArticles;
+    },
+    filterSelection(c) {
+      this.select = c;
+    },
     addArticle () {
       this.$emit('add-article', this.newArticle)
     },
@@ -147,8 +151,6 @@ article {
 }
 
 .article-img div {
-  /*width: 100px;
-  height: 100px;*/
   max-height: 100%;
   width: auto;
   background-size: cover;
