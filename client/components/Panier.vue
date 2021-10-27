@@ -62,7 +62,7 @@ module.exports = {
 <style scoped>
 article {
   display: flex;
-  height: 250px;
+  height: 400px;
   margin-bottom: 10px;
 }
 
