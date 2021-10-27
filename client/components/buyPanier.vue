@@ -1,17 +1,7 @@
 <template>
     <div>
-        <!--<form onreset="buy()">
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" aria-label="address" required>
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" aria-label="city" required>
-            <label for="postalcode">Postal code:</label>
-            <input type="text" id="postalcode" name="postalcode" aria-label="postalcode" required>
-            <input type="reset" value="Buy">
-        </form>-->
-
         <div class="form">
-            <form onreset="buy()">
+            <form onsubmit="buy()">
                 <div class="title">Delivery</div>
                 <div class="subtitle">Delivery address</div>
                 <div class="input-container ic1">
@@ -29,12 +19,16 @@
                     <div class="cut"></div>
                     <label for="email" class="placeholder">Postal code</label>
                 </div>
-                <input type="reset" class="submit" value="Buy">
+                <input type="submit" class="submit" value="Buy">
             </form>
          </div>
     </div>
 
 </template>
+
+<script>
+
+</script>
 
 <style scoped>
 

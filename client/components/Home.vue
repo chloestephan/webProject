@@ -19,8 +19,8 @@
           <h2>{{ article.name }} - {{ article.price }}€</h2>
           <div>
             <!-- allow someone to delete an article or edit the description of an article -->
-          <button class="btnArticles" @click="deleteArticle(article.id)">Supprimer</button>
-          <button class="btnArticles" @click="editArticle(article)">Modifier</button>
+          <button class="btnArticles" @click="deleteArticle(article.id)">Delete</button>
+          <button class="btnArticles" @click="editArticle(article)">Modify</button>
           <button class="btnArticles" @click="addToPanier(article.id)" v-if="!isInPanier(article.id)">Add to basket</button>
           <button class="btnArticles" @click="removeFromPanier(article.id)" v-else>Remove from basket</button>
           </div>
