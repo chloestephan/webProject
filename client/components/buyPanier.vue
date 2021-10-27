@@ -26,10 +26,6 @@
 
 </template>
 
-<script>
-
-</script>
-
 <style scoped>
 
 body {
@@ -79,6 +75,7 @@ form {
   width: 100%;
   background-color: #990000;
   margin: 0;
+  padding-left: 0;
 }
 
 .ic1 {
@@ -95,11 +92,12 @@ form {
   border: 0;
   box-sizing: border-box;
   color: #990000;
-  font-size: 18px;
+  font-size: 20px;
   height: 100%;
   outline: 0;
   padding: 20px 0;
   width: 100%;
+  margin-top: 5px;
 }
 
 .cut {

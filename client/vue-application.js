@@ -62,10 +62,6 @@ var app = new Vue({
       const res = await axios.delete('/api/panier/' + articleId)
       this.panier = res.data
     },
-    async emptyBasket(){
-      data.articles = [];
-    }
-    ,
     async changeQuantity (newQuantity) {
       const res = await axios.put('/api/panier/' + newQuantity.articleId, newQuantity)
       this.panier = res.data
@@ -76,7 +72,6 @@ var app = new Vue({
 //compute shipping
 function buy() {
   alert("The basket was bought ! Thank you :)");
-  emptyBasket();
 }
 
 

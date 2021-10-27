@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="myBtnContainer">
-      <button class="btn active" v-on:click="filterSelection('all')"> Show all</button>
+      <button class="btn" v-on:click="filterSelection('all')"> Show all</button>
       <button class="btn" v-on:click="filterSelection('trousers')"> Trousers</button>
       <button class="btn" v-on:click="filterSelection('tops')"> Tops</button>
       <button class="btn" v-on:click="filterSelection('shoes')"> Shoes</button>
@@ -78,7 +78,6 @@ module.exports = {
     }
   },
   methods: {
-    
     getArticles(){
       let listArticles = [];
       if(this.select != "all"){
