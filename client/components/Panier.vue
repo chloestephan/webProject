@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>Mon Panier</h2>
-    <article v-for="article in atriclesInPanier" :key="article.id">
+    <h2>My basket</h2>
+    <article v-for="article in atriclesInPanier" :key="article.id" id="article">
       <div class="article-img">
         <div :style="{ backgroundImage: 'url(' + article.image + ')' }">
         </div>
@@ -20,7 +20,6 @@
         <p>{{ article.description }}</p>
       </div>
     </article>
-
     <button class="hidden buy"><router-link to='/buyPanier'>Buy</router-link></button>
   </div>
 </template>
@@ -57,6 +56,7 @@ module.exports = {
     }
   }
 }
+
 </script>
 
 <style scoped>
@@ -72,8 +72,6 @@ article {
 }
 
 .article-img div {
-  /*width: 100px;
-  height: 100px;*/
   max-height: 100%;
   width: auto;
   background-size: cover;

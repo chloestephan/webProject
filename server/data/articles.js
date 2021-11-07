@@ -51,7 +51,7 @@ const articles = [
     id: 7,
     category : 'shoes',
     name: 'Bottines Chelsea Doc Martens',
-    description: 'They are veryyyyyy expensive but they are veryyyyyyy good. Like really',
+    description: 'Empiècements élastiques. Bout rond. Tirant. Surpiqûres contrastantes emblématiques de la marque. Semelle antidérapante',
     image: 'https://images.asos-media.com/products/dr-martens-2976-bottines-chelsea-en-cuir-vegan-noir/20540338-1-black?$n_480w$&wid=476&fit=constrain',
     price: 189.00,
   },

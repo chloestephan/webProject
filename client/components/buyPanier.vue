@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="form">
+        <div class="form" id="form">
             <form onsubmit="buy()">
                 <div class="title">Delivery</div>
                 <div class="subtitle">Delivery address</div>

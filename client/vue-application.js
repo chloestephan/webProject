@@ -72,6 +72,8 @@ var app = new Vue({
 //compute shipping
 function buy() {
   alert("The basket was bought ! Thank you :)");
+  address.value = '';
+  city.value = '';
+  postalcode.value ='';
 }
-
 

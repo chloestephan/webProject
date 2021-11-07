@@ -45,7 +45,7 @@
       <h2>Add a new product</h2>
       <input type="text" v-model="newArticle.name" placeholder="Product's name" required class="nom-du-produit">
       <input type="number" v-model="newArticle.price" placeholder="Price" required class="prix">
-      <textarea type="text" v-model="newArticle.description" placeholder="Article's description" required class="new-description"></textarea>
+      <textarea type="text" v-model="newArticle.description" placeholder="Product's description" required class="new-description"></textarea>
       <input type="text" v-model="newArticle.image" placeholder="Link to the image" class="link-img">
       <button class="btnArticles add-article" type="submit">Add</button>
     </form>
